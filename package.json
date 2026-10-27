@@ -1,6 +1,6 @@
 {
   "name": "@icure/lzma-wasm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LZMA2/XZ compression and decompression for browsers and Node.js, using liblzma compiled to WebAssembly",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
