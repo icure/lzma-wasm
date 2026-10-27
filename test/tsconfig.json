@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "lib": ["es2017", "DOM"],
+    "types": ["node"],
+    "rootDir": ".",
+    "outDir": "../test-dist"
+  },
+  "include": ["*.ts"]
+}

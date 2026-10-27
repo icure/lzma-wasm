@@ -1,0 +1,43 @@
+{
+  "name": "@icure/lzma-wasm",
+  "version": "1.0.0",
+  "description": "LZMA2/XZ compression and decompression for browsers and Node.js, using liblzma compiled to WebAssembly",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "LICENSE.liblzma"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp src/lzma.js src/lzma.wasm src/lzma.d.ts dist/",
+    "build:wasm": "./src/build.sh",
+    "test": "npm run build && tsc -p test && node --test test-dist/*.test.js",
+    "prepublishOnly": "npm test"
+  },
+  "keywords": [
+    "lzma",
+    "lzma2",
+    "xz",
+    "compression",
+    "wasm",
+    "webassembly"
+  ],
+  "author": "Taktik sa - B12 Consulting",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icure/lzma-wasm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/icure/lzma-wasm/issues"
+  },
+  "homepage": "https://github.com/icure/lzma-wasm#readme",
+  "devDependencies": {
+    "@types/node": "^18.19.75",
+    "typescript": "^5.8.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
